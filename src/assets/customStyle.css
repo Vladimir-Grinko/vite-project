@@ -1,0 +1,156 @@
+@import "./dxTheme.css";
+
+body[data-theme="light"] {
+  --background-color-typography: rgba(255, 255, 255, 0.9);
+  --background-color-outlined: rgba(255, 255, 255, 0.7);
+  --color-headers: #436b73;
+  --color-dark_mode: #919191;
+  --background-color-counter: #ffffff;
+  --border-switch-filter: #ddd;
+  --background-color-warning-info: #f7f7f7;
+}
+
+body[data-theme="dark"] {
+  --background-color-typography: rgba(42, 42, 42, 0.9);
+  --background-color-outlined: rgba(42, 42, 42, 0.7);
+  --color-headers: #adf3dc;
+  --color-dark_mode: currentColor;
+  --background-color-counter: #2a2a2a;
+  --border-switch-filter: #4d4d4d;
+  --background-color-warning-info: rgba(31, 30, 30, 0.7);
+}
+
+text {
+  fill: var(--color-headers);
+}
+body {
+  background: linear-gradient(90deg, #395492, #0099c0, #3dd5a8);
+}
+/* основной фон страницы  */
+.dx-theme-generic-typography {
+  background-color: var(--background-color-typography);
+}
+.dx-toolbar {
+  background-color: var(--background-color-typography);
+}
+.dx-datagrid {
+  background-color: var(--background-color-typography);
+}
+
+.dx-texteditor.dx-editor-outlined {
+  background-color: var(--background-color-outlined);
+}
+.dx-button-mode-contained {
+  background-color: var(--background-color-outlined);
+}
+.dx-editor-cell .dx-texteditor,
+.dx-editor-cell .dx-texteditor .dx-texteditor-input {
+  background: transparent;
+}
+
+/* другие стили */
+.dx-datagrid-headers {
+  /* color: #990505; */
+  color: var(--color-headers);
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.dark_mode::before,
+.light_mode::before {
+  font-size: 15px;
+  color: var(--color-dark_mode);
+}
+
+.dx-icon-chart::before {
+  content: "\f01c";
+  color: #ff4a1d;
+}
+
+.dx-fileuploader-files-container {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dx-fileuploader-show-file-list .dx-fileuploader-files-container {
+  padding-top: 5px;
+}
+.dx-fileuploader-input-wrapper {
+  padding: 0;
+  border: 3px dashed transparent;
+}
+
+.dx-svg-icon svg {
+  fill: #ff4a1d;
+}
+
+/* стиль для тайтлов листов формы 3-тэк */
+.toolbar-title span {
+  padding-left: 3px;
+  margin: 7px 18px 0 0;
+  color: #068dee;
+  font-weight: bold;
+  font-size: 17px;
+}
+/* .dx-datagrid-rowsview .dx-row-focused.dx-data-row .dx-command-edit:not(.dx-focused) .dx-link,
+  .dx-datagrid-rowsview .dx-row-focused.dx-data-row > td:not(.dx-focused),
+  .dx-datagrid-rowsview .dx-row-focused.dx-data-row > tr > td:not(.dx-focused) {
+    background-color: #e3e3e3;
+    color: currentColor;
+  } */
+
+.dx-fa-button.dx-fa-button-main .dx-overlay-content {
+  min-width: 36px;
+  max-height: 36px;
+  border-radius: 4px;
+  z-index: 7;
+  box-shadow: none;
+}
+
+.dx-fa-button.dx-fa-button-main .dx-overlay-content .dx-fa-button-icon,
+.dx-fa-button.dx-fa-button-main .dx-overlay-content .dx-fa-button-icon-close {
+  padding: 9px;
+  z-index: 7;
+}
+
+.dx-overlay-wrapper {
+  z-index: 9 !important;
+}
+
+.dx-fa-button .dx-overlay-content .dx-fa-button-icon {
+  background-color: #337ab7;
+  color: #fff;
+  transition: all 0.2s ease-in;
+}
+
+.dx-fa-button .dx-overlay-content .dx-fa-button-icon:hover {
+  color: #2a2a2a;
+  background-color: #337ab7;
+  transition: all 0.2s ease-in;
+}
+
+.dx-fa-button
+  .dx-overlay-content
+  .dx-fa-button-label-wrapper
+  .dx-fa-button-label {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.switch-filter {
+  border: 1px solid var(--border-switch-filter);
+}
+
+/* .search-panel-custom {
+    border: 1px solid #ddd;
+  } */
+
+.counter {
+  background-color: var(--background-color-counter);
+}
+.warning-info {
+  background-color: var(--background-color-warning-info);
+}
