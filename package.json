@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "author": "Vladimir Grinko",
+  "homepage": "https://Vladimir-Grinko.github.io/vite-project",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
